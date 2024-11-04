@@ -16,15 +16,15 @@ class GuestsAdapter: RecyclerView.Adapter<GuestViewHolder>() {
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): GuestViewHolder {
         val item = RowGuestBinding.inflate(LayoutInflater.from(parent.context),parent,false) // o xml row_guest (linha)
         return GuestViewHolder(item,listener)
-    }
+    } //componente criado
 
     override fun getItemCount(): Int {
         return guestList.count()
-    }
+    }//dados contados
 
     override fun onBindViewHolder(holder: GuestViewHolder, position: Int) { // vai passar cada um da lista
         holder.bind(guestList[position]) // vai selecionar todos que o questList.count obter
-    }
+    }//dados adcionados no ViewHolder
 
     fun updateGuests(list: List<GuestModel>) {
         guestList = list

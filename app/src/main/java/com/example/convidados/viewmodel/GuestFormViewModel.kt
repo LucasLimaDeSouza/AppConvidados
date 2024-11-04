@@ -4,13 +4,12 @@ import android.app.Application
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
-import androidx.lifecycle.ViewModel
 import com.example.convidados.model.GuestModel
 import com.example.convidados.repository.GuestRepository
 
 class GuestFormViewModel(application: Application) : AndroidViewModel(application) {
 
-    private val repository = GuestRepository.getInstancie(application)
+    private val repository = GuestRepository(application)
 
     private val guestModel = MutableLiveData<GuestModel>()
     var guest: LiveData<GuestModel> = guestModel

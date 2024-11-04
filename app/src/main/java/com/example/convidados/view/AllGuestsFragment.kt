@@ -35,7 +35,7 @@ class AllGuestsFragment : Fragment() {
                 val intent = Intent(context, GuestFormActivity::class.java)
 
                 val bundle = Bundle()
-                bundle.putInt(DataBaseConstants.GUESt.ID, id)
+                bundle.putInt(DataBaseConstants.GUESt.ID, id)// chave e valor
 
                 intent.putExtras(bundle) // Adicionando dados extras à intent para a próxima pagina ou atividade
                 startActivity(intent)
@@ -56,7 +56,7 @@ class AllGuestsFragment : Fragment() {
 
     override fun onResume() {
         super.onResume()
-        viewModel.getAll() // finaliza chamando todos (Ciclo de vida)
+        viewModel.getAll() // Começa chamando todos (Ciclo de vida)
     }
 
     override fun onDestroyView() {
